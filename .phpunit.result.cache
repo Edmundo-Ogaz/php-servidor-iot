@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":322:{a:2:{s:7:"defects";a:2:{s:56:"DeviceUseCaseTest::testCanBeCreatedFromValidEmailAddress";i:4;s:57:"DeviceUseCaseTest::testCanBeCreatedFromValidEmailAddress1";i:4;}s:5:"times";a:2:{s:56:"DeviceUseCaseTest::testCanBeCreatedFromValidEmailAddress";d:0.001;s:57:"DeviceUseCaseTest::testCanBeCreatedFromValidEmailAddress1";d:0;}}}

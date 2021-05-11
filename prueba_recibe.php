@@ -21,6 +21,9 @@
         $query = "INSERT INTO device_history(idDevice, variable, valor, fecha) VALUES('$device', 'humedad', $humidity, NOW())";
         $insert = mysqli_query($conn->conectardb(), $query);
 
+        $query = "INSERT INTO entry(field1, field2, created_at) VALUES($temperature, $humidity, NOW())";
+        $insert = mysqli_query($conn->conectardb(), $query);
+
         echo "DATOS RECIBIDOS<br>";
 
         echo "{DEVICE:".$device.", TEMP:".$temperature.", HUMI:".$humidity."}";
