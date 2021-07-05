@@ -9,8 +9,7 @@
     $result = $entry->getByDeviceName('tarjeta1', $limit);
     if( $result ) {
         header('Content-Type: application/json');
-        echo json_encode($result);
-
+        echo json_encode(["feeds" => $result ]);
     }
     else {
         echo "*** LA TARJETA NO EXISTE ***<br>";

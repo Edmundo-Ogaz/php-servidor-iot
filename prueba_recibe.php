@@ -12,16 +12,16 @@
     $select = mysqli_query($conn->conectardb(), $query);
 
     if($select->num_rows) {
-        $query = "UPDATE device_state SET temperatura = $temperature, humedad=$humidity WHERE idDevice= '$device'";
-        $update = mysqli_query($conn->conectardb(), $query);
+        // $query = "UPDATE device_state SET temperatura = $temperature, humedad=$humidity WHERE idDevice= '$device'";
+        // $update = mysqli_query($conn->conectardb(), $query);
 
-        $query = "INSERT INTO device_history(idDevice, variable, valor, fecha) VALUES('$device', 'temperatura', $temperature, NOW())";
-        $insert = mysqli_query($conn->conectardb(), $query);
+        // $query = "INSERT INTO device_history(idDevice, variable, valor, fecha) VALUES('$device', 'temperatura', $temperature, NOW())";
+        // $insert = mysqli_query($conn->conectardb(), $query);
 
-        $query = "INSERT INTO device_history(idDevice, variable, valor, fecha) VALUES('$device', 'humedad', $humidity, NOW())";
-        $insert = mysqli_query($conn->conectardb(), $query);
+        // $query = "INSERT INTO device_history(idDevice, variable, valor, fecha) VALUES('$device', 'humedad', $humidity, NOW())";
+        // $insert = mysqli_query($conn->conectardb(), $query);
 
-        $query = "INSERT INTO entry(field1, field2, created_at) VALUES($temperature, $humidity, NOW())";
+        $query = "INSERT INTO entry(field1, field2, created_at, device_name) VALUES($temperature, $humidity, NOW(), '$device')";
         $insert = mysqli_query($conn->conectardb(), $query);
 
         echo "DATOS RECIBIDOS<br>";
